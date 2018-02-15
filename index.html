@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>Crystal Collectors</title>
-	  	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<h1>Crystals Collector</h1>
@@ -14,16 +15,33 @@
 		<p>The value of each crystal is hidden from you until you click on it.</p>
 		<p>Each time the game starts, the game will change the value of each crystal.</p>
 	</div>
-	<div id="random-number-goal">random number</div>
-	<div id="wins-losses">wins and losses</div>
+	<div>
+	<div>
+		<h4 id="messagebox">Message Box</h4>
+	</div>
+		<h3>Number Goal</h3>
+		<div id="random-number-goal">0</div>
+	</div>
+	<div>
+		<h3>Wins and Losses</h3>
+		<div>
+			<h4>Wins: <span id="wins"></span></h4>
+		</div>
+		<div>
+			<h4>Losses: <span id="losses"></span></h4>
+		</div>
+	</div>
 	<div class="crystals">
 		<img id="crystal1" src="assets/images/beige crystal cropped.jpg">
 		<img id="crystal2" src="assets/images/blue crystal.jpg">
 		<img id="crystal3" src="assets/images/green crystal.jpg">
 		<img id="crystal4" src="assets/images/red crystal.png">
 	</div>
-	<p>Your Total Score Is:</p>
+	<h3>Your Total Score Is:</h3>
 	<div id="total-score"></div>
+	<div>
+		<button id="reset">Reset Game</button>
+	</div>
 
 </body>
 <script src="assets/javascript/game.js"></script>
