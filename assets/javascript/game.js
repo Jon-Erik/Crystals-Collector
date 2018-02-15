@@ -40,7 +40,8 @@ var winChecker = function() {
 		gameStarted = false;
 		resetGame();
 		console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
-		return;
+		$("img").off();
+		
 	} else if (totalScore > goalRandomNumber) {
 		$("#messagebox").html("You Lose!");
 		losses++;
@@ -48,7 +49,6 @@ var winChecker = function() {
 		gameStarted = false;
 		resetGame();
 		console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
-		return;
 	}
 }
 
@@ -87,6 +87,6 @@ if (gameStarted = true) {
 		winChecker();
 	});
 } else {
-	resetGame();
-	console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
+	//resetGame();
+	//console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
 }
