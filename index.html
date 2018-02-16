@@ -27,41 +27,52 @@
 	<div class="row">
 		<div class="col">
 			<div class="card">
-				<div class="card-header">Wins and Losses</div>
+				<div class="card-header"><h4>Wins and Losses</h4></div>
 				<div class="card-body">
-					<p>Wins: <span id="wins"></span></p>
-				</div>
-				<div class="card-body">
-					<p>Losses: <span id="losses"></span></p>
+					<p>
+					Wins: <span id="wins"></span></br>
+					Losses: <span id="losses"></span>
+					</p>
 				</div>
 			</div>
 		</div>
 		<div class="col">
-			<div class="card">
-				<h3 class="card-header">Number Goal</h3>
-				<div id="random-number-goal" class="card-body">0</div>
+			<div class="card" id="goal-number">
+				<h4 class="card-header text-center">Goal Number</h4>
+				<div id="random-number-goal" class="card-body text-center"><h6>0</h6></div>
 			</div>
 		</div>
 	</div>
 	<div class="card">
-		<h4 id="messagebox card-header">Click a crystal to start playing!</h4>
-		<div class="crystals card-body">
-			<img id="crystal1" src="assets/images/beige crystal cropped.jpg">
-			<img id="crystal2" src="assets/images/blue crystal.jpg">
-			<img id="crystal3" src="assets/images/green crystal.jpg">
-			<img id="crystal4" src="assets/images/red crystal.png">
+		<h4 id="messagebox" class="card-header">Click on a crystal to start playing!</h4>
+		<div class="crystals card-body row">
+			<div class="col-sm-3">
+				<img id="crystal1" src="assets/images/beige crystal cropped.jpg">
+			</div>
+			<div class="col-sm-3">
+				<img id="crystal2" src="assets/images/blue crystal.jpg">
+			</div>
+			<div class="col-sm-3">
+				<img id="crystal3" src="assets/images/green crystal.jpg">
+			</div>
+			<div class="col-sm-3">
+				<img id="crystal4" src="assets/images/red crystal.png">
+			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
-			<div class="card">
-				<h3>Your Total Score Is:</h3>
-				<div id="total-score"></div>
+			<div class="card" id="score-card">
+				<div class="card-header"><h4>Total Score</h4></div>
+				<h6 class="card-body score-text">Your Total Score Is: <span id="total-score"></span></h6>
 			</div>
 		</div>	
 		<div class="col">
 			<div class="card">
-				<button id="reset">Reset Game</button>
+				<div class="card-header text-center"><h4>Reset</h4></div>
+				<div class="card-body">
+					<button id="reset">Click here to reset and get new numbers</button>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -34,16 +34,15 @@ var resetGame = function() {
 
 var winChecker = function() {
 	if (totalScore === goalRandomNumber) {
-		$("#messagebox").html("You Win!");
+		$("#messagebox").html("You Win! Keep guessing to play again");
 		wins++;
 		$("#wins").html(wins);
 		gameStarted = false;
 		resetGame();
 		console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
-		$("img").off();
 		
 	} else if (totalScore > goalRandomNumber) {
-		$("#messagebox").html("You Lose!");
+		$("#messagebox").html("You Lose! Keep guessing to play again");
 		losses++;
 		$("#losses").html(losses);
 		gameStarted = false;
@@ -86,7 +85,4 @@ if (gameStarted = true) {
 		$("#total-score").html(totalScore);
 		winChecker();
 	});
-} else {
-	//resetGame();
-	//console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
 }

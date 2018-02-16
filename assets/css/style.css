@@ -3,5 +3,26 @@ h1 {
 }
 
 img {
-	height: 150px;
+	height: 100px;
+}
+
+#goal-number, #score-card {
+	height: 100%;
+}
+
+#random-number-goal, .score-text {
+	font-size: 25px;
+}
+
+.row {
+	margin: 25px 0px;
+}
+
+.jumbotron {
+	background-image: url('../images/crystal background.jpg');
+}
+
+.display-4, .lead {
+	text-shadow: 1px 1px black;
+	color: white;
 }
