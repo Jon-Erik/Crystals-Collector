@@ -18,6 +18,15 @@ var wins = 0;
 var losses = 0;
 var gameStarted = true;
 
+$("#total-score").html(totalScore);
+$("#random-number-goal").html(goalRandomNumber);
+$("#wins").html(wins);
+$("#losses").html(losses);
+$("#reset").click(function(event) {
+	resetGame();
+	console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
+});
+
 var resetGame = function() {
 	goalRandomNumber = numberGenerator(19, 120);
 	crystal1 = numberGenerator(1, 12);
@@ -30,59 +39,40 @@ var resetGame = function() {
 	$("#random-number-goal").html(goalRandomNumber);
 	$("#wins").html(wins);
 	$("#losses").html(losses);
+	$('#messagebox').html("Click on a crystal to start playing!")
 }
 
 var winChecker = function() {
 	if (totalScore === goalRandomNumber) {
-		$("#messagebox").html("You Win! Keep guessing to play again");
+		$("#messagebox").html("You Win! Click reset to play again");
 		wins++;
 		$("#wins").html(wins);
 		gameStarted = false;
-		resetGame();
 		console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
 		
 	} else if (totalScore > goalRandomNumber) {
-		$("#messagebox").html("You Lose! Keep guessing to play again");
+		$("#messagebox").html("You Lose! Click reset to play again");
 		losses++;
 		$("#losses").html(losses);
 		gameStarted = false;
-		resetGame();
 		console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
 	}
 }
 
-$("#total-score").html(totalScore);
-$("#random-number-goal").html(goalRandomNumber);
-$("#wins").html(wins);
-$("#losses").html(losses);
-
-$("#reset").click(function(event) {
-	resetGame();
-	console.log(crystal1 + " " + crystal2 + " " + crystal3 + " " + crystal4);
-});
-
-if (gameStarted = true) {
-	$("#crystal1").click(function(event) {
-		totalScore = totalScore + crystal1;
+function crystalClicker(id, crystalNum) {
+		$(id).click(function(event) {
+		if (gameStarted) {
+		totalScore = totalScore + crystalNum;
 		$("#total-score").html(totalScore);
 		winChecker();
-	});
-
-	$("#crystal2").click(function(event) {
-		totalScore = totalScore + crystal2;
-		$("#total-score").html(totalScore);
-		winChecker();
-	});
-
-	$("#crystal3").click(function(event) {
-		totalScore = totalScore + crystal3;
-		$("#total-score").html(totalScore);
-		winChecker();
-	});
-
-	$("#crystal4").click(function(event) {
-		totalScore = totalScore + crystal4;
-		$("#total-score").html(totalScore);
-		winChecker();
+		}
 	});
 }
+
+crystalClicker("#crystal1", crystal1);
+
+crystalClicker("#crystal2", crystal2);
+
+crystalClicker("#crystal3", crystal3);
+
+crystalClicker("#crystal4", crystal4);

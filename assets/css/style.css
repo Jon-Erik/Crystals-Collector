@@ -6,7 +6,7 @@ img {
 	height: 100px;
 }
 
-#goal-number, #score-card {
+#goal-number, #score-card, .reset {
 	height: 100%;
 }
 
@@ -20,6 +20,7 @@ img {
 
 .jumbotron {
 	background-image: url('../images/crystal background.jpg');
+	background-position: center center;
 }
 
 .display-4, .lead {
